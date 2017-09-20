@@ -1,0 +1,17 @@
+<!-- wxml是编写小程序骨架的文件 -->
+<!-- <div>起到容器作用分割文档 -->
+<!-- view容器主键
+在小程序里面只有被text包围的才能长按选中（与HTML的不同）
+逻辑分辨率px不是指物理像素，这里是iPhone6 物理像素除以2
+移动端分辨率
+//文字行高和容器一样，上下居中
+container未设置高度，它是自适应内部元素高度，所以背景颜色不完全覆盖
+ -->
+<view class="container" >
+    <image  class="user-avator"  src="/images/YamiSese.png"></image>
+    <text class="user-name">hello 七月</text>
+    <view class="moto-container">
+        <text class="moto"> 开启小程序之家</text>
+    </view>
+  
+</view>
