@@ -1,0 +1,47 @@
+<!-- swiper容器swiper-item完全继承父容器
+vertical 垂直滚动
+src,标签里面“{{}}”文本不加"",{{}}
+vertical="false"false是字符串，转成Boolean，空仍旧为真
+涉及boolean都得是{{}}
+vertical 中“{{false}}”
+img显示或隐藏
+ wx:if="{{false}}" 
+ 字符串运算
+ {{"hello"+date}}
+ a:1,b:2,c:3,
+ {{a+b+c}}=>6
+ wx:for循环 wx:for-index位置
+ alt+shift+f可以格式化代码
+ //引用模板 template
+ is=的是template模板的name
+ item 指定的是wx:for-item="item"的item指定的子元素
+ -->
+
+<import src="post-item/post-item-template.wxml"/>
+<view class="classname">
+  <swiper indicator-dots="true" autoplay="true" interval="5000">
+     <swiper-item>
+        <image src="/images/Tong.png" ></image>
+     </swiper-item>
+     <swiper-item>
+      <image src="/images/kite.png"></image>
+     </swiper-item>
+     <swiper-item>
+      <image src="/images/YamiSese.png" ></image>
+     </swiper-item>
+  </swiper>
+</view>
+<view class="post-container">
+<block wx:for="{{postsList}}" wx:for-item="item">
+<!-- <template > -->
+<template is="postItem" data="{{item}}"/>
+ <!-- <view class="post-author-date">
+    <image src="{{item.img.author_img}}" class="post-author"></image>
+    <text class="post-date">{{item.post_date}}</text>
+  </view>
+    <image wx:if="{{item.condition}}" src="{{item.img.post_img}}" class="post-image"></image>
+    <text class="post-content">{{item.post_content}}</text> -->
+
+</block>
+  
+</view>

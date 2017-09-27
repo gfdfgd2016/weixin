@@ -1,0 +1,26 @@
+@import "post-item/post-item-template.wxss";
+
+
+.post-author-date{
+  border-bottom: 1px solid gainsboro;
+  background-color: paleturquoise;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.post-author{
+  width: 100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  margin:5rpx 30rpx 5rpx 10rpx; 
+}
+.post-date{
+  font-family: 楷体;
+  color:goldenrod;
+}
+.post-content{
+  font-family:Arial, Helvetica, sans-serif;
+  color: #405308;
+  font-style: oblique;
+}

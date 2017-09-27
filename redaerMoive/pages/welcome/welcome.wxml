@@ -6,12 +6,17 @@
 移动端分辨率
 //文字行高和容器一样，上下居中
 container未设置高度，它是自适应内部元素高度，所以背景颜色不完全覆盖
+绑定事件
+bindtap="onTap"当发生事件，去找此方法并实现 catchtap=""阻止冒泡catchtap="onTextTap"只响应本事件父节点不响应
+页面跳转 父级到子级wx.navigateTo有返回最多有5级
+  平行跳转无返回wx.redirectTo
+  冒泡：点击子节点父节点也会响应
  -->
 <view class="container" >
     <image  class="user-avator"  src="/images/YamiSese.png"></image>
     <text class="user-name">hello 七月</text>
-    <view class="moto-container">
-        <text class="moto"> 开启小程序之家</text>
+    <view class="moto-container" bindtap="onTap">
+        <text class="moto" > 开启小程序之家</text>
     </view>
   
 </view>
